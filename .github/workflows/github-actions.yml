@@ -5,4 +5,4 @@ jobs:
   test_biotsavart:
     runs-on: windows-2022
     steps:
-      - run: echo "test"
+      - run: python -m pytest test_biotsavart.py
