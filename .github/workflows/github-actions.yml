@@ -3,5 +3,6 @@ run-name: Running appropriate tests after committing changes
 on: push
 jobs:
   test_biotsavart:
+    runs-on: windows-2022
     steps:
       - run: echo "test"
