@@ -6,4 +6,5 @@ jobs:
     runs-on: windows-2022
     steps:
       - run: python --version
+      - run: cd ../../
       - run: ls
