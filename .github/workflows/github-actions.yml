@@ -5,5 +5,5 @@ jobs:
   test_biotsavart:
     runs-on: windows-2022
     steps:
-      - working-directory: CI-pipeline-project
+      working-directory: CI-pipeline-project
       - run: cd
