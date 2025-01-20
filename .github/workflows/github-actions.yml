@@ -5,5 +5,5 @@ jobs:
   test_biotsavart:
     runs-on: windows-2022
     steps:
-      - run: pip freeze > requirements.txt
+      - working-directory: CI-pipeline-project
       - run: cd
