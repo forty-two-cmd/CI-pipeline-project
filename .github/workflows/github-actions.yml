@@ -5,5 +5,5 @@ jobs:
   test_biotsavart:
     runs-on: windows-2022
     steps:
-      - run: python --version
+      - run: pip --version
       - run: cd
