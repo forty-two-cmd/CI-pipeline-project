@@ -6,4 +6,4 @@ jobs:
     runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
-      - run: cd
+      - run: pip freeze > requirements.txt
