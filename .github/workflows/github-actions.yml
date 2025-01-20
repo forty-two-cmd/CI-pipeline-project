@@ -5,5 +5,5 @@ jobs:
   test_biotsavart:
     runs-on: windows-2022
     steps:
+      - uses: actions/checkout@v4
       - run: cd
-        uses: actions/checkout@v4
