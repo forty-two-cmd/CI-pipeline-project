@@ -6,4 +6,4 @@ jobs:
     runs-on: windows-2022
     steps:
       - run: cd
-        working-directory: ../../
+        uses: actions/checkout@v4
