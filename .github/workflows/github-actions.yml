@@ -5,5 +5,5 @@ jobs:
   test_biotsavart:
     runs-on: windows-2022
     steps:
-      - run: pip --version
+      - run: pip freeze > requirements.txt
       - run: cd
