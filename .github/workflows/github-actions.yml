@@ -2,28 +2,12 @@ name: Actions after commit
 run-name: Running appropriate tests after committing changes
 on: push
 jobs:
-  setup_python:
+  test_biotsavart:
     runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
       - run: pip install -r requirements.txt
-  test_biotsavart:
-
-    needs: setup_python
-    steps:
       - run: python -m pytest test_biotsavart.py
-  run_biotsavart:
-    runs-on: windows-2022
-    needs: test_biotsavart
-    steps:
       - run: python biotsavart.py
-  test_fourier:
-    runs-on: windows-2022
-    needs: [test_biotsavart, run_biotsavart]
-    steps:
       - run: python -m pytest test_fourier.py
-  run_plot_modes:
-    runs-on: windows-2022
-    needs: [test_biotsavart, run_biotsavart, test_fourier]
-    steps:
       - run: python plot_modes.py
