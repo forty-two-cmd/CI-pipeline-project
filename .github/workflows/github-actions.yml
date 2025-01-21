@@ -8,6 +8,24 @@ jobs:
       - uses: actions/checkout@v4
       - run: pip install -r requirements.txt
       - run: python -m pytest test_biotsavart.py
+  run_biotsavart:
+    runs-on: windows-2022
+    needs: test_biotsavart
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -r requirements.txt
       - run: python biotsavart.py
+  test_fourier:
+    runs-on: windows-2022
+    needs: [test_biotsavart, run_biotsavart]
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -r requirements.txt
       - run: python -m pytest test_fourier.py
+  run_plot_modes:
+    runs-on: windows-2022
+    needs: [test_biotsavart, run_biotsavart, test_fourier]
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -r requirements.txt
       - run: python plot_modes.py
