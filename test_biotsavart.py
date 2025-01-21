@@ -57,4 +57,4 @@ def test_biotsavart(R_max, nR, nphi, nZ, R_0, I_c, nseg, integrator, grid_iterat
     machine_epsilon = np.finfo(np.float64).eps
     tol = max(BZ_analytic) * (nseg * np.tan(np.pi / nseg) / np.pi - 1) + machine_epsilon
 
-    assert np.all([abs(BZ[i] - BZ_analytic[i]) < tol for i in range(nZ)])
+    assert False#np.all([abs(BZ[i] - BZ_analytic[i]) < tol for i in range(nZ)])
