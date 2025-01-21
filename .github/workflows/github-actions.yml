@@ -9,3 +9,5 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m pytest test_biotsavart.py
       - run: python biotsavart.py
+      - run: python -m pytest test_fourier.py
+      - run: python plot_modes.py
